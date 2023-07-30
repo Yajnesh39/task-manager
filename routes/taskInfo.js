@@ -83,8 +83,10 @@ taskRoutes.delete('/:taskId', (req, res) => {
     let writePath = path.join(__dirname, '..', 'tasks.json');
     const taskDataModified = taskData;
 
-    const index = tasksList.findIndex(x => x.taskId === taskIdPassed);
+    const index = tasksList.findIndex(x => x.taskId == taskIdPassed);
+    console.log(index);
     tasksList.splice(index, 1);
+    console.log(tasksList);
     
     taskDataModified.taskManager = tasksList;
 

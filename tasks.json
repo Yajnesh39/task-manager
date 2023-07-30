@@ -1,16 +1,1 @@
-{
-    "taskManager": [
-        {
-            "taskId": 1,
-            "title": "Notepad",
-            "description": "This is a text editor",
-            "completionStatus": true
-        },
-        {
-            "taskId": 2,
-            "title": "Whatsapp",
-            "description": "This is a messager",
-            "completionStatus": true
-        }
-    ]
-}
+{"taskManager":[{"taskId":2,"title":"Chrome","description":"This is a browser","completionStatus":true}]}
