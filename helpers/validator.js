@@ -21,7 +21,13 @@ class validator {
         }
     }
 
-    static validateUpdateTaskInfo(taskInfo, taskData) {
+    static validateUniqueTaskId(taskInfo, taskData) {
+      let valueFound = taskData.taskManager.some(el => el.taskId === taskInfo.taskId);
+      if(valueFound) return false;
+      return true;
+    }
+
+    static validateUpdateTaskInfo(taskInfo , taskData) {
       if(taskInfo.hasOwnProperty("taskId") ||
         taskInfo.hasOwnProperty("title") ||
         taskInfo.hasOwnProperty("description") ||
@@ -35,12 +41,6 @@ class validator {
           "status": false,
           "message": "Tasks Info has Incorrect Information !, Please give right information"
         }
-    }
-  
-    static validateUniqueTaskId(taskInfo, taskData) {
-      let valueFound = taskData.taskManager.some(el => el.taskId === taskInfo.taskId);
-      if(valueFound) return false;
-      return true;
     }
   
   }

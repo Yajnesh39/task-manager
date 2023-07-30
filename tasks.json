@@ -5,6 +5,12 @@
             "title": "Notepad",
             "description": "This is a text editor",
             "completionStatus": true
+        },
+        {
+            "taskId": 2,
+            "title": "Whatsapp",
+            "description": "This is a messager",
+            "completionStatus": true
         }
     ]
 }
